@@ -1,0 +1,40 @@
+##
+##
+#PBS -S /bin/bash
+#PBS -l nodes=1:ppn=8
+#PBS -l mem=32GB
+#PBS -l walltime=1440:00:00
+#PBS -N Chalcona
+
+cd $PBS_O_WORKDIR
+
+echo "inicio do job: "`date`
+echo "Hostname: " `hostname`
+echo "PWD: "$PWD
+
+module load softwares/gaussian-16/b01
+
+g16 enol_deut.gjf
+sleep 3
+
+g16 H2O.gjf
+sleep 3
+
+g16 H2O_deut.gjf
+sleep 3
+
+g16 OH.gjf
+sleep 3
+
+g16 acet_.gjf
+sleep 3
+
+g16 acet_deut_.gjf
+sleep 3
+
+g16 benz_.gjf
+sleep 3
+
+g16 benz_deut_.gjf
+sleep 3
+

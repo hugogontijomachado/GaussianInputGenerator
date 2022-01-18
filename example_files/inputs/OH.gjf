@@ -1,0 +1,16 @@
+%rwf=/Storage01/hugo/chalcona
+%int=/Storage01/hugo/chalcona
+%d2e=/Storage01/hugo/chalcona
+%nosave
+%nprocshared=8
+%mem=32GB
+%chk=OH
+# opt freq=noraman M08HX/aug-cc-pvdz volume scrf=(smd,solvent=water) scf=xqc 
+
+OH
+
+-1 1
+ O                  0.00000000    0.00000000    0.10749700
+ H                  0.00000000    0.00000000   -0.85997500
+
+
